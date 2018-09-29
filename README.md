@@ -1,4 +1,4 @@
-### 基于Deerlet做了一个个人版本的在线奖励模板, 感谢相关开发者~
+### 基于Deerlet做了个人版本的在线简历模板PersonResume
 [DEMO | 在线预览](http://resume.dwzhao.com)
 
 
@@ -14,7 +14,7 @@
 
     git clone https://github.com/DaweiZhao007/PersonResume.git && cd PersonResume/static && git clone https://github.com/pandao/editor.md.git
 
-**安装第三方包（最好在virtualenv中）**：
+**安装第三方依赖包（最好使用virtualenv中）**：
 
     pip install -r requirements.txt
 
@@ -22,18 +22,17 @@
 
 按照wkhtmltopdf[官网](http://wkhtmltopdf.org/downloads.html)下载安装对应版本
 
-
+```
 Linux:
-    DEB 系: sudo apt-get install wkhtmltopdf
-
-    如果下载之后仍然报错，请尝试[https://stackoverflow.com/questions/34479040/how-to-install-wkhtmltopdf-with-patched-qt]
-
+    cd mytmpfolder
+    wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
+    sudo tar xvf wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
+    sudo mv wkhtmltox/bin/wkhtmlto* /usr/bin/
+    
     由于服务器中文字体不全的问题，请下载字体并更新缓存：
-
     sudo apt-get install fonts-wqy-microhei ttf-wqy-microhei fonts-wqy-zenhei ttf-wqy-zenhei
-
     fc-cache -f -v
-
+```
 **运行**：
 
     Python main.py
