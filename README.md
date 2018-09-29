@@ -1,12 +1,6 @@
-### 基于Deerlet做了个人版本的在线简历模板PersonResume
+### 基于Deerlet做了个人版本的在线简历模板PersonalResume
+
 [DEMO | 在线预览](http://resume.dwzhao.com)
-
-
-- 后端基于：[Flask](https://github.com/mitsuhiko/flask),   [Flask-Markdown](https://github.com/dcolish/flask-markdown)
-- 前端基于：[yue.css](https://github.com/lepture/yue.css),   [editor.md](https://github.com/pandao/editor.md)
-- pdf打印服务基于：[wkhtmltopdf](http://wkhtmltopdf.org/)
-
-(resume.md 的基本模板仅作为参考)
 
 ### 下载及部署
 
@@ -36,16 +30,10 @@ Linux:
 **运行**：
 
     Python main.py
-
     open "http://127.0.0.1:5000" # 访问 http://127.0.0.1:5000
 
 ### 配置
-
-建议在使用之前，进行配置。配置集中在 Deerlet 的项目根目录下的 config.py 中：
-
-
-    SECRET_KEY = os.environ.get('SECRET_KEY') or 'yourpassword'  # Modify your SECRET KEY 建议足够复杂
-
+    配置在项目根目录下的 config.py 中：
     TITLE = '马云的简历'  # 简历标题，例：马云的简历
     SUB_TITLE = '好的东西往往都是很难描述的'  # 简历子标题，一句话介绍自己，例：好的东西往往都是很难描述的。
     READ_PASSWORD = '12345'  # 简历浏览密码
@@ -69,4 +57,9 @@ Linux:
 
 一切简历数据（除了标题）保存在 `resume.md` 中，如果喜欢，你也可以离线编辑，并且 copy 到任何地方。
 
+
+### 技术框架：
+- 后端基于：[Flask](https://github.com/mitsuhiko/flask),   [Flask-Markdown](https://github.com/dcolish/flask-markdown)
+- 前端基于：[yue.css](https://github.com/lepture/yue.css),   [editor.md](https://github.com/pandao/editor.md)
+- pdf打印服务基于：[wkhtmltopdf](http://wkhtmltopdf.org/)
 
